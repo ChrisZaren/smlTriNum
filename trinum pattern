@@ -1,0 +1,7 @@
+fun helper(i, plus, counter) = if counter = i then plus :: nil
+else plus :: helper(i, plus + (counter+1), counter+1);
+
+fun ntri(i) = if i = 0 then nil
+else helper(i, 1, 1);
+
+ntri(7);
